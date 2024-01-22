@@ -1,0 +1,2 @@
+ng build --configuration production --base-href="./musical_theory"
+angular-cli-ghpages --dir=dist/musical_theory
