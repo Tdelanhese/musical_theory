@@ -1,0 +1,129 @@
+.background {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .question {
+        font-size: 3rem;
+        color: #f3f3f3;
+        line-height: 2.7rem;
+        text-align: center;
+    
+        span {
+            font-size: 3.1rem;
+            font-weight: 600;
+            color: #153e28;
+            text-shadow: 0 0 4px rgb(0 0 0 / 29%);
+        }
+    }
+    
+    .tone {
+        font-size: 8rem;
+        color: #fff;
+        background: #0ECAE8;
+        width: fit-content;
+        padding: 0 3rem;
+        border-radius: 1rem;
+        box-shadow: #0000001f 2px 3px 3px 3px;
+        margin: 3rem 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 4rem;
+        
+        span::first-letter {
+            text-transform: uppercase;
+        }
+
+        &.back-green {
+            background: #05a105;
+        }
+
+        &.back-red {
+            background: #b40a0a;
+        }
+    }
+
+    .resp {
+        position: relative;
+
+        input {
+            font-size: 2rem;
+            padding: 1.2rem 2.2rem;
+            width: 10rem;
+            margin-top: 3.5rem;
+            border: 0;
+            background: #fff;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        button {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 70%;
+            width: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: -22%;
+            background: #4f8a6b;
+            border: solid 0.05rem #00000040;
+            border-radius: 0.5rem;
+
+            &:hover {
+                transition: all .25s;
+                cursor: pointer;
+                background: rgb(14, 170, 87);
+            }
+        }
+    }
+
+    
+}
+
+.configs {
+    position: absolute;
+    top: 2.5rem;
+    display: flex;
+    padding: 2.5rem 3rem;
+    border-radius: 0.5rem;
+    background: #21453eb5;
+    width: 60vw;
+
+    label {
+        font-size: 1.6rem;
+        margin: 0 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        input {
+            margin: 0 .5rem;
+            margin-bottom: .25rem;
+            height: 2rem;
+            width: 2rem;
+
+            &[type="number"] {
+                font-size: 1.7rem;
+                width: 5rem;
+                text-align: center;
+            }
+        }
+    }
+}
+

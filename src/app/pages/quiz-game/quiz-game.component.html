@@ -1,0 +1,32 @@
+<div class="background">
+  <div class="quiz">
+    <p class="question">Qual a <span>{{ infos[sortedQuestion]?.termo }}</span> para<br>o tom</p>
+    <div class="tone" [ngClass]="{ 'back-green': showResult && resultInfo?.result, 'back-red': showResult && !resultInfo?.result }">
+      <span *ngIf="!showResult">{{ sortedTone }}</span>
+      <span *ngIf="showResult">
+        <span *ngIf="!resultInfo?.result">{{ resultInfo?.correctResp }}</span>
+        <span *ngIf="resultInfo?.result" class="material-symbols-outlined">check</span>
+      </span>
+    </div>
+
+    <div class="resp">
+      <input #response type="text" (keyup.enter)="checkResult(response.value)">
+      <button (click)="checkResult(response.value)"><span class="material-symbols-outlined">check</span></button>
+    </div>
+    
+  </div>
+
+  <div class="configs">
+    <label>Somente Tons Naturais
+      <input type="checkbox" [(checked)]="configs.onlyNaturalTones" (change)="checkedConfig(!configs.onlyNaturalTones, 'onlyNaturalTones')">
+    </label>
+    
+    <label>Obrigatório Resposta incluindo (m)
+      <input type="checkbox" [(checked)]="configs.requiredMinor" (change)="checkedConfig(!configs.requiredMinor, 'requiredMinor')">
+    </label>
+
+    <label>Tempo mostrando o resultado (seg)
+      <input #valueTimeShowResp type="number" [(value)]="configs.timeShowResp" (change)="checkedConfig(valueTimeShowResp.value, 'timeShowResp')">
+    </label>
+  </div>
+</div>
