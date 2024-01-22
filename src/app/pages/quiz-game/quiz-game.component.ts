@@ -54,7 +54,7 @@ export class QuizGameComponent implements OnInit {
   }
 
   sortedToneAndQuestion() {
-    this.sortedQuestion = this.getRandomArbitrary(2, 7)
+    this.sortedQuestion = this.getRandomArbitrary(1, 6)
     this.sortedTone = Object.keys(this.campoHarmonicoMaior)[this.getRandomArbitrary(0, this.configs.onlyNaturalTones ? 6 : 11)]
 
     setTimeout(() => {
